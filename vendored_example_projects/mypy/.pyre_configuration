@@ -1,0 +1,7 @@
+{
+  "ignore_all_errors": [
+    "mypy/typeshed/"
+  ],
+  "source_directories": ["mypy", "mypyc"],
+  "site_package_search_strategy": "all"
+}
