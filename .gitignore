@@ -130,3 +130,7 @@ dmypy.json
 
 # Pytype type checker
 .pytype/
+
+
+# stripped examples directory (stripped copies of vendored directories)
+stripped_examples/

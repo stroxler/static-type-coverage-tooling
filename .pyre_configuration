@@ -1,0 +1,6 @@
+{
+  "strict": true,
+  "site_package_search_strategy": "all",
+  "source_directories": ["src"],
+  "ignore_all_errors": ["vendored_example_projects"]
+}
