@@ -32,14 +32,16 @@ def strip_types_for_project(
     files = glob.glob(f"{project}/**/*.py")
     n_strip = int(percentage * len(files))
     to_strip = random.sample(files, n_strip)
-    for module in to_strip:
-        failures = 0
-        try:
-            subprocess.check_output(["strip-hints", "--inplace", module])
-        except Exception:
-            failures += 1
-    if failures > 0:
-        print(f"Failed to strip {failures} / {n_strip} files")
+    with open(project / "stripped_files", "w") as stripped_file_log:
+        for module in to_strip:
+            failures = 0
+            try:
+                subprocess.check_output(["strip-hints", "--inplace", module])
+                stripped_file_log.write(f"{module}\n")
+            except Exception:
+                failures += 1
+        if failures > 0:
+            print(f"Failed to strip {failures} / {n_strip} files")
 
 
 def copy_and_strip_project(
