@@ -1,4 +1,4 @@
-# Code realated to a Typing Summit 2023 presentation on static type-coverage tools
+# Code related to a Typing Summit 2023 presentation on static type-coverage tools
 
 
 This repo is a dumping ground for code related to collecting data and/or
